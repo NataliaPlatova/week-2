@@ -6,8 +6,11 @@ def ask_user():
         while (user_say).strip() != "Хорошо":
             user_say = input("Как дела?")
 
-        user_question = input("Задайте вопрос")
-        print(questions.get((user_question).strip()))
+        x = 1
+        while x!=0:
+            user_question = input("Задайте вопрос")
+            if user_question.strip() in questions:
+                print(questions.get((user_question).strip()))
     except(KeyboardInterrupt):
         print("Пока!")
 
